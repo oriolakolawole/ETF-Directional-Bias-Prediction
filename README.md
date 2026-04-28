@@ -1,20 +1,20 @@
-# 📊 ETF Directional Bias Prediction with MLP & Technical Indicators
+# ETF Directional Bias Prediction with MLP & Technical Indicators
 
 A machine learning project that predicts the **next-day directional bias** (up or down) of the **iShares Core S&P 500 ETF (IVV)** using a Multi-Layer Perceptron (MLP) trained on a comprehensive set of technical indicators. The study evaluates how feature selection via correlation ranking affects classification accuracy using 10-fold stratified cross-validation.
 
 ---
 
-## 💡 Core Idea
+## Core Idea
 
 The target variable Γ(t) is defined as:
 
-$$\Gamma(t) = \begin{cases} +1 & \text{if } \text{Close}(t) - \text{Close}(t-1) > 0 \\ -1 & \text{otherwise} \end{cases}$$
+$$\Gamma(t) = \begin{cases} +1 & \text{if } \text{Close}(t) - \text{Close}(t-1) > 0 | \\ -1 & \text{otherwise} \end{cases}$$
 
-The model is trained to predict **Γ(t+1)** — tomorrow's direction — using today's technical indicator values. This frames price direction forecasting as a binary classification problem.
+The model is trained to predict **Γ(t+1)** (tomorrow's direction) using today's technical indicator values. This frames price direction forecasting as a binary classification problem.
 
 ---
 
-## 🔬 What's Covered
+## What's Covered
 
 | Section | Description |
 |---|---|
@@ -29,7 +29,7 @@ The model is trained to predict **Γ(t+1)** — tomorrow's direction — using t
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 The MLP hidden layer size is derived dynamically from the number of input features:
 
@@ -44,7 +44,7 @@ max_iter    = 5000
 
 ---
 
-## 📊 Feature Selection Experiment
+## Feature Selection Experiment
 
 Seven feature subset sizes are evaluated against the full-feature baseline:
 
@@ -62,7 +62,7 @@ Results are reported as **median CV accuracy**, **mean CV accuracy**, and **gain
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 | Parameter | Value |
 |---|---|
@@ -74,7 +74,7 @@ Results are reported as **median CV accuracy**, **mean CV accuracy**, and **gain
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ```bash
 pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
@@ -84,7 +84,7 @@ pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. Clone the repository:
    ```bash
@@ -102,7 +102,7 @@ pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---|---|
@@ -115,7 +115,7 @@ pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
@@ -125,6 +125,6 @@ pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is for **educational and research purposes only** and does not constitute financial or investment advice. Predicting market direction is inherently uncertain, and past model performance does not guarantee future results.
