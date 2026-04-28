@@ -91,7 +91,7 @@ pip install numpy pandas matplotlib scikit-learn yfinance pandas_ta TA-Lib
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   cd ETF-Directional-Bias-Prediction
    ```
 2. Install dependencies (see above).
 3. Open the notebook:
