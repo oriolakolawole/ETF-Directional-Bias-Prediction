@@ -12,6 +12,8 @@ $$\Gamma(t) = \begin{cases} +1 & \text{if } \text{Close}(t) - \text{Close}(t-1) 
 
 The model is trained to predict **Γ(t+1)** (tomorrow's direction) using today's technical indicator values. This frames price direction forecasting as a binary classification problem.
 
+[Click Here to view the Project](etf-directional-bias-prediction.ipynb)
+
 ---
 
 ## What's Covered
